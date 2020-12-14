@@ -4,9 +4,10 @@
 
     <div class="products">
     @foreach($products as $product)
-
+        
         <div class="product-container">
 
+            <!-- <img src="../storage/{{$product['image']}}" alt=""> -->
             <img src="../storage/{{$product['image']}}" alt="">
             <p class="product-name">{{$product['name']}}</p> 
             <p class="product-price">IDR {{$product['price']}}</p> 

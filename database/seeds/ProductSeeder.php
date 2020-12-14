@@ -21,7 +21,7 @@ class ProductSeeder extends Seeder
         $product->description="TRUEFREE+ EXTRA FREE WITH BETTER BATTERY
         Larger capacity charging case supports 9-10 full charge for both earbuds.";
         $product->price=389000;
-        $product->image="imgs/Earphone/1";
+        $product->image="imgs/Earphone/1.webp";
         $product->save();
 
         $product = new Product;
@@ -30,7 +30,7 @@ class ProductSeeder extends Seeder
         $product->description="Powerful Sound & Unique Design with DUAL DRIVERS CROSSOVERS
         that creates a immersive and melodious listening experience for you.";
         $product->price=589000;
-        $product->image="imgs/Earphone/2";
+        $product->image="imgs/Earphone/2.webp";
         $product->save();
         
         $product = new Product;
@@ -38,7 +38,7 @@ class ProductSeeder extends Seeder
         $product->category_id=1;
         $product->description="SOUNDPEATS Truefree is One of the Bestsellers on Amazon.";
         $product->price=279000;
-        $product->image="imgs/Earphone/3";
+        $product->image="imgs/Earphone/3.webp";
         $product->save();
 
         $product = new Product;
@@ -46,7 +46,7 @@ class ProductSeeder extends Seeder
         $product->category_id=1;
         $product->description="High-end Configuration, Zero Pressure Operation,Super Easy Pairing.";
         $product->price=479000;
-        $product->image="imgs/Earphone/4";
+        $product->image="imgs/Earphone/4.webp";
         $product->save();
 
         // Laptop
@@ -56,7 +56,7 @@ class ProductSeeder extends Seeder
         $product->category_id=2;
         $product->description="MSI Summit E14 A11SCST [9S7-14C424-229].";
         $product->price=25999000;
-        $product->image="imgs/Laptop/1";
+        $product->image="imgs/Laptop/1.webp";
         $product->save();
 
         $product = new Product;
@@ -64,7 +64,7 @@ class ProductSeeder extends Seeder
         $product->category_id=2;
         $product->description="MSI PRESTIGE 15 A11SCX [9S7-16S612-234] URBAN SILVER.";
         $product->price=21999000;
-        $product->image="imgs/Laptop/2";
+        $product->image="imgs/Laptop/2.webp";
         $product->save();
         
         $product = new Product;
@@ -72,7 +72,7 @@ class ProductSeeder extends Seeder
         $product->category_id=2;
         $product->description="MSI Notebook GF75 9SC.";
         $product->price=14999000;
-        $product->image="imgs/Laptop/3";
+        $product->image="imgs/Laptop/3.webp";
         $product->save();
 
         $product = new Product;
@@ -80,7 +80,7 @@ class ProductSeeder extends Seeder
         $product->category_id=2;
         $product->description="MSI Notebook GF63 9SCXR [9S7-16R412-838] - Black.";
         $product->price=10999000;
-        $product->image="imgs/Laptop/4";
+        $product->image="imgs/Laptop/4.webp";
         $product->save();
 
     }

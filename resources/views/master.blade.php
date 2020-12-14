@@ -17,6 +17,15 @@
         <input type="submit" value="search" class="search-btn">
     </form>
     <!-- change between roles -->
+    @if(isset ($roles) && $roles == 'Guest')
+
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    @else
+        <a href="/cart">Cart </a>
+        <a href="/history">History </a>
+        <a>Username</a>
+    @endif
 </div>
 <!-- Buat login/register yang gada if -->
 @else

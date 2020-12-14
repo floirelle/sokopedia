@@ -4,6 +4,10 @@
 
         <img src="../storage/{{$product['image']}}" alt="">
         <div class="product-detail-content">
+            <form action="/addtocart" method="post">
+            @csrf
+            <input type="hidden" name="pid" value="{{$product->id}}">
+            <input type="hidden" name="uid" value="3">
             <p class="product-detail-name">{{$product->name}}</p>
             <hr>
             <div class="product-detail-price-container">
@@ -13,10 +17,12 @@
             <div class="product-detail-desc">
                 Description : {{$product->description}}
             </div>
-            <div class="add-cart-qty-container">
-            Quantity: <input type="number" name="qty" id="" class="qty-counter" min="0" value=0>
-            </div>
-            <a href="/addToCart/{{$product->id}}" class="product-detail-add-to-cart-btn">Add To Cart</a>
+            
+                <div class="add-cart-qty-container">
+                Quantity: <input type="number" name="qty" id="" class="qty-counter" min="0" value=0>
+                </div>
+                <input type="submit" class="product-detail-add-to-cart-btn" value="Add To Cart">
+            </form>
         </div>
     </div>
 @endsection
