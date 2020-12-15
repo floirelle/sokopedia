@@ -12,8 +12,12 @@ class ViewController extends Controller
         $products = Product::paginate(3);
 
         return view('home',[
-            'products'=>$products,
-            'search'=>"",
+            'products'=> $products,
+            'search'=> "",
         ]);
+    }
+
+    public function adminHome() {
+        return view('admin');
     }
 }

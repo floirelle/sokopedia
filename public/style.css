@@ -10,17 +10,45 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 60px;
+    height: 80px;
     padding-top: 20px;
     justify-content: center;
 }
 
 .header a{
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     text-decoration: none;
 }
+
 .header a:hover{
     text-decoration: none;
+}
+
+.admin-header{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.admin-header a{
+    text-decoration: none;
+}
+
+.admin-title {
+    margin-top: 40px;
+}
+
+.admin-list-product {
+    margin: 100px;
+}
+
+.form-custom {
+    margin: 100px;
 }
 
 .logo{
