@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cart;
-
+use App\Transaction;
+use App\TransactionDetail;
 class CartController extends Controller
 {
     public function  insert(Request $request)
@@ -56,5 +57,27 @@ class CartController extends Controller
         $id = $request->cart_id;
         Cart::where("id",$id)->delete();
         return redirect()->back();
+    }
+
+    public function checkout(Request $request)
+    {
+        //retrieve user id from auth / session
+        // $id = $request->user_id;
+        $id = 3;
+        $transaction = new Transaction;
+        $transaction->user_id = $id;
+        $transaction->save();
+        
+        $cart = Cart::where('user_id',$id)->get();
+        foreach($cart as $item)
+        {
+            $detail = new TransactionDetail;
+            $detail->transaction_id = $transaction->id;
+            $detail->product_id = $item->product_id;
+            $detail->qty = $item->qty;
+            $detail->save();
+            $item->delete();
+        }
+        return redirect('/cart');
     }
 }

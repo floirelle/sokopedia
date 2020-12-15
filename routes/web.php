@@ -24,6 +24,10 @@ Route::get('/home', 'ViewController@home');
 Route::get('/product/{id}','ProductController@viewDetail');
 Route::get('/addtocart/{id}','ProductController@addToCart');
 Route::get('/cart','CartController@viewCart');
+Route::get('/history','TransactionController@viewHistory');
+
 
 Route::post('/addtocart','CartController@insert');
 Route::post('/deleteFromCart','CartController@delete');
+Route::post('/checkout','CartController@checkout');
+Route::post('/getDetails','TransactionController@getDetail');

@@ -13,7 +13,8 @@ class ProductController extends Controller
         $products = Product::where('name','like',"%{$request->name}%")->paginate(3);
         $products->appends($request->only('name'));
         return view('search',[
-            'products'=>$products
+            'products'=>$products,
+            'search'=>""
         ]);
     }
 

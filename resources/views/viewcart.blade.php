@@ -29,8 +29,13 @@
 @endforeach
 
 
-{{count($cart)}}
-<form action="/checkout" method="post">
+@php
+    $disabled = (count($cart) == 0)?'disabled' : "";
+@endphp
 
+<form action="/checkout" method="post">
+    @csrf
+    <input type="hidden" name="uid" value="3">
+    <input type="submit" value="Checkout" class="checkout-btn" {{$disabled}}>
 </form>
 @endsection
