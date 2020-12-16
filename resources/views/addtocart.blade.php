@@ -19,7 +19,7 @@
             </div>
             
                 <div class="add-cart-qty-container">
-                Quantity: <input type="number" name="qty" id="" class="qty-counter" min="1" value=0>
+                Quantity: <input type="number" name="qty" id="" class="qty-counter" min="1" value=1>
                 </div>
                 <input type="submit" class="product-detail-add-to-cart-btn" value="Add To Cart">
             </form>
