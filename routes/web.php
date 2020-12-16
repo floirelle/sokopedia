@@ -40,3 +40,7 @@ Route::get('/cart','CartController@viewCart');
 Route::post('/addtocart','CartController@insert');
 Route::post('/deleteFromCart','CartController@delete');
 Route::post('/checkout','CartController@checkout');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
