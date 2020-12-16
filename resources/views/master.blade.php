@@ -24,7 +24,8 @@
     @else
         <a href="/cart">Cart </a>
         <a href="/history">History </a>
-        <a>Username</a>
+        <a>{{Auth::user()->name}}</a>
+        <a href="{{ route('logout') }}" style="color: red">Logout</a>
     @endif
 </div>
 <!-- Buat login/register yang gada if -->
