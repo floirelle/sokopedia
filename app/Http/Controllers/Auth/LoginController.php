@@ -30,7 +30,6 @@ class LoginController extends Controller
     
     // protected $redirectTo = RouteServiceProvider::HOME ;
    
-    // protected $redirectTo =  (1==1) ? "A" : "B";;
 
     public function redirectTo()
     {
