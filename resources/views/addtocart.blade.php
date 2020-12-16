@@ -7,7 +7,7 @@
             <form action="/addtocart" method="post">
             @csrf
             <input type="hidden" name="pid" value="{{$product->id}}">
-            <input type="hidden" name="uid" value="3">
+            
             <p class="product-detail-name">{{$product->name}}</p>
             <hr>
             <div class="product-detail-price-container">

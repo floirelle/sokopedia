@@ -14,9 +14,9 @@ class ProductController extends Controller
         // die($request->name);
         $products = Product::where('name','like',"%{$request->name}%")->paginate(3);
         $products->appends($request->only('name'));
-        return view('search',[
-            'products'=>$products,
-            'search'=>""
+        return view('home',[
+            'products'=>$products
+           
         ]);
     }
 
@@ -24,8 +24,8 @@ class ProductController extends Controller
         $product = Product::where('id',$id)->first();
         
         return view('detail',[
-            'product' => $product,
-            'search' => ""
+            'product' => $product
+            
         ]);
 
     }
@@ -34,8 +34,8 @@ class ProductController extends Controller
         $product = Product::where('id',$id)->first();
         
         return view('addtocart',[
-            'product' => $product,
-            'search' => ""
+            'product' => $product
+           
         ]);
     }
 

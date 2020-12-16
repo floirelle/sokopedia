@@ -60,6 +60,10 @@ body{
     padding: 0px 5px 0px 5px;
 }
 
+.logo:hover{
+    text-decoration: none;
+}
+
 .search-bar{
     padding: 0px 5px 0px 5px;
     margin-left: 20px;

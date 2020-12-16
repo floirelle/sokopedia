@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-
+use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
     /**
@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -24,11 +24,21 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // if(Auth::check() && Auth::user()->role=="Admin"){
+            
+        //     return redirect('/admin');
+        // }
+
+
         $products = Product::paginate(3);
 
         return view('home',[
-            'products'=> $products,
-            'search'=> "",
+            'products'=> $products
+            
         ]);
+    }
+
+    public function adminHome(){
+        return view('admin');
     }
 }
